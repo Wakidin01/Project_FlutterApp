@@ -11,20 +11,52 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_application_1/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  // Tipe data dan variable
+  // var
+  var mahasiswa = "Wakidin";
+  var umur = 20;
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+  print(mahasiswa + " umur = " + umur.toString());
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+  //string
+  String mahasiswaString;
+  mahasiswaString = "Bayu";
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
-  });
+  print(mahasiswaString);
+
+  //int
+  int semester;
+  semester = 6;
+
+  print(semester);
+
+  //double
+  double ipk;
+  ipk = 38;
+
+  print(ipk);
+
+  //boolean
+  bool benar = true;
+  bool salah = false;
+  bool tidakbenar = !true;
+  bool tidaksalah = !false;
+
+  //List
+  List<String> jurusan = [
+    "Teknik Informatika",
+    "Sistem Informasi",
+    "Managemen Informatika",
+    semester.toString(),
+    ipk.toString()
+    ];
+
+  print(jurusan);
+
+  //Map
+  Map<String, dynamic> kelas = {"nama": "Hasan", "kelas": "MI 1"};
+
+    print(kelas);
+    print(kelas['nama']);
+    print(kelas['kelas']);
 }
