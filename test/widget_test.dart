@@ -49,14 +49,32 @@ void main() {
     "Managemen Informatika",
     semester.toString(),
     ipk.toString()
-    ];
+  ];
 
   print(jurusan);
 
   //Map
   Map<String, dynamic> kelas = {"nama": "Hasan", "kelas": "MI 1"};
 
-    print(kelas);
-    print(kelas['nama']);
-    print(kelas['kelas']);
+  print(kelas);
+  print(kelas['nama']);
+  print(kelas['kelas']);
+
+  //Operator
+  int a, b;
+  a = 9;
+
+  b = 7;
+
+  print("a = " + a.toString());
+  print("b = " + b.toString());
+
+  print(a + b);
+  print(a - b);
+  print(a / b);
+  print(a * b);
+  print(a > b);
+  print(a < b);
+  print(a >= b);
+  print(a <= b);
 }
