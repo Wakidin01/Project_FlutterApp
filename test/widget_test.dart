@@ -104,8 +104,8 @@ var o = hitungNilai3(79,100);
   print(mahasiswafk);
 
 //null safety
-//? ! late
-//? digunakan dia boleh null
+//Late
+//digunakan dia boleh null
 late String jurusan;
   
   
@@ -172,4 +172,54 @@ hitungNilai2({mapel1, mapel2}) {
 void hitungNilai3(mapel1, mapel2){
   var nilaiAkhir = mapel1 + mapel2;
   print(nilaiAkhir);
+}
+
+// oop
+// class
+class Kendaraan {
+  String? merk;
+  String? nama;
+  int? kecepatan;
+
+// konstruktor
+  Kendaraan({this.merk, this.nama, this.kecepatan});
+
+// method
+  maju(int tambahkecepatan) {
+    kecepatan = kecepatan! + tambahkecepatan;
+//     print(kecepata + tambahkecepatan);
+  }
+}
+
+// inheritance / pewarisan
+class Sedan extends Kendaraan {
+  int? jumlahPintu;
+  int? kecepatanMaksimal;
+
+  Sedan({String? merk, this.jumlahPintu, this.kecepatanMaksimal})
+      : super(merk: merk);
+}
+
+void main() {
+// instansiasi
+  var k1 = Kendaraan(merk: 'Honda', nama: 'civic', kecepatan: 20);
+  // k1.merk = "Toyota";
+  k1.maju(40);
+  print(k1.merk);
+  print(k1.nama);
+  print(k1.kecepatan);
+
+  var k2 = Kendaraan(merk: 'Mitsubshi', nama: 'colt', kecepatan: 50);
+  k2.maju(80);
+
+//   print(kecepatan);
+  print(k2.merk);
+  print(k2.nama);
+  print(k2.kecepatan);
+
+  var s1 = Sedan(jumlahPintu: 4, kecepatanMaksimal: 120, merk: "Honda");
+  print("-------");
+  print(s1.jumlahPintu);
+  print(s1.kecepatanMaksimal);
+  print(s1.merk);
 }
