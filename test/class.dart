@@ -2,129 +2,124 @@
 // Prodi : Manajemen Informatika 1/4
 // NIM   : 20200123017
 
-// Perkuliahan
+// perkuliahan
 // class Parent
-class perkuliahan {
-  String? fti;
-  String? feb;
+class FTI {
+  String? fakultas;
+  String? jurusan;
 
   // constructor
-  Jersey({this.fti, this.feb});
+  FTI({this.fakultas, this.jurusan});
 }
 
-// inheritance atau turunan dari class jersey
-class manajemenInformatika extends mi {
-  String? mhs;
-  String? dosen;
+// turunan dari class FTI
+class manajemenInformatika extends FTI {
+  String? prodi;
+  String? matkul;
 
-  manajemenInformatika({String? fti, this.nama, this.nim}) : super(fti: fti);
+  manajemenInformatika({String? fakultas, this.prodi, this.matkul}) : super(fakultas: fakultas);
 }
 
-class teknikInformatika extends ti {
-  String? jurusan;
-  String? nim;
+class teknikInformatika extends FTI {
+  String? prodi;
+  String? matkul;
 
-  teknikInformatika{String? fti, this.nama, this.nim}) : super(fti: fti);
+  teknikInformatika({String? fakultas, this.prodi, this.matkul}) : super(fakultas: fakultas);
   
 }
 
-
 // Dosen
 // class Parent
-class dosen {
+class Dosen {
   String? jenis;
 
   // constructor
-  dosen({this.nama});
+  Dosen({this.jenis});
 }
 
-// inheritance atau turunan dari class bola
-class dosenkaprodi extends kaprodi {
+// turunan dari class DOSEN
+class DosenKaprodi extends Dosen {
   String? nama;
+  String? alamat;
   String? nip;
-  String? fti;
 
-  dosenKaprodi({String? jenis, this.nama, this.nip, this.fti}) : super(jenis: jenis);
+  DosenKaprodi({String? jenis, this.nama, this.alamat, this.nip}) : super(jenis: jenis);
 
 }
 
-class dosenPengajar extends pengajar {
+class DosenPengajar extends Dosen {
   String? nama;
+  String? alamat;
   String? nip;
-  String? fti;
 
-  dosenPengajar({String? jenis, this.nama, this.nip, this.fti}) : super(jenis: jenis);
+  DosenPengajar({String? jenis, this.nama, this.alamat, this.nip}) : super(jenis: jenis);
 
 }
-
 
 void main() {
-  // jurusan
+  // FTI
   // instansiasi
-  var j1 = jurusan1(merk: 'mi', jenis: 'fti');
+  var F1 = FTI(fakultas: 'Manajemen Informatika', jurusan: 'Fakultas Teknik Informasi');
 
   print("_______");
-  print("Manajemen informatika : ");
-  print(j1.merk);
-  print(j1.jenis);
+  print("Perkuliahan : ");
+  print(F1.fakultas);
+  print(F1.jurusan);
   print("_______");
 
-  var j2 = Jurusan2(merk: 'Merk : ti', jenis: 'Jenis : feb');
+  var F2 = FTI(fakultas: 'Teknik Informatika', jurusan: 'Fakultas Teknik Informasi');
 
   print("_______");
-  print("jurusan2 : ");
-  print(j2.merk);
-  print(j2.jenis);
+  print("Perkuliahan : ");
+  print(F2.fakultas);
+  print(F2.jurusan);
 
-  // var s1 = JerseyBola(tipe: 'Tipe : Grade Ori', bahan: 'Bahan : Dry-fit', merk: "Merk : Nike");
-  // print("-------");
-  // print(s1.tipe);
-  // print(s1.bahan);
-  // print(s1.merk);
+  var P1 = manajemenInformatika(prodi: 'Prodi : Manajemen informatika', matkul: 'matkul : Mobile Proggraming', fakultas: 'fakultas : FTI');
+  print("-------");
+  print(P1.prodi);
+  print(P1.matkul);
+  print(P1.fakultas);
 
-  var j3 = jurusan3(merk: 'Merk : manajemen', jenis: 'Jenis : feb');
+  var F3 = FTI(fakultas: 'fakultas : Fakultas Teknik Informasi', jurusan: 'Jurusan : Manajemen Informatika');
 
   print("_______");
-  print("manajemen : ");
-  print(j3.merk);
-  print(j3.jenis);
+  print("Tekik Informatika : ");
+  print(F3.fakultas);
+  print(F3.jurusan);
 
-  var s2 = JerseyBasket(
-      MadeIn: 'Made In : USA',
-      bahan: 'Bahan : Climacool',
-      merk: "Merk : Air Jordan");
+  var P2 = teknikInformatika(prodi: 'prodi : Teknik Informatika', matkul: 'matkul : Web Programing', fakultas: "fakultas : fakultas teknik informasi");
   print("----------------");
-  print(s2.MadeIn);
-  print(s2.bahan);
-  print(s2.merk);
+  print(P2.prodi);
+  print(P2.matkul);
+  print(P2.fakultas);
 
   print("\n");
   print("________________________________________________________");
   print("\n");
 
-// BOLA
- var j4 = Bola(jenis: 'Jenis : Bola Besar');
+// Dosen
+ var D4 = Dosen(jenis: 'Jenis : Dosen Kaprodi');
 
-  print("Tentang Bola : ");
-  print(j4.jenis);
+  print("Dosen Perkuliahan : ");
+  print(D4.jenis);
 
-  var s3 = BolaBasket(Olahraga: "Olahraga : Basket", Merk: 'Merk : Molten', MadeIn: 'Made In : USA');
+  var DOS3 = DosenKaprodi(nama: "nama : Chairun nas", alamat: 'alamat : cirebon', nip: 'nip : 1233009878');
   print("-------");
-  print(s3.Olahraga);
-  print(s3.Merk);
-  print(s3.MadeIn);
+  print(DOS3.nama);
+  print(DOS3.alamat);
+  print(DOS3.nip);
 
-  var j5 = Bola(jenis: 'Jenis : Bola Besar');
+  var DOS5 = Dosen(jenis: 'Jenis : Dosen pengajar');
 
   print("\n");
 
-  print("Tentang Bola : ");
-  print(j5.jenis);
+  print("Dosen perkuliahan : ");
+  print(DOS5.jenis);
 
-  var s4 = BolaBasket(Olahraga: "Olahraga : Volly", Merk: 'Merk : Mikasa', MadeIn: 'Made In : JAPAN');
+  var DOS4 = DosenPengajar(nama: "nama : Ilwan Ilyasa", alamat: 'alamat : Bogor', nip: 'nip : 12345987686');
   print("-------");
-  print(s4.Olahraga);
-  print(s4.Merk);
-  print(s4.MadeIn);
+  print(DOS4.nama);
+  print(DOS4.alamat);
+  print(DOS4.nip);
 
 }
