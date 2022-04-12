@@ -93,6 +93,54 @@ var n = hitungNilai2(mapel1: 50, mapel2: 2);
 var o = hitungNilai3(79,100);
 }
 
+//const finalkeyword => inutable / tidak bisa dirubah
+//const
+//const String mahasiswa = 'wakidin';
+//final
+  final String mahasiswafk;
+
+  mahasiswafk = 'wakidin';
+
+  print(mahasiswafk);
+
+//null safety
+//? ! late
+//? digunakan dia boleh null
+late String jurusan;
+  
+  
+jurusanns = 'manajemen informatika';
+// jurusan = 'MI';
+// memaksa untuk dijalankan / yakin ada datanya
+print(jurusanns.length);
+
+// perulangan lopping
+// for plus
+  for(int no = 1; no <= 5; no++){
+print(no);
+  }
+  
+// for minus
+  for(int no = 5; no >= 1; no--){
+print(no);
+  }
+  
+// while
+  int no1 = 1;
+  int no2 = 5;
+while(no1 <= no2){
+  print(no1);
+  no1++;
+}
+  
+// do while
+int no3 = 1;
+int no4 = 5;
+do{
+  print(no3);
+  no3++;
+}while(no3 <= no4);
+
 //function
 hitungNilai() {
   print('hitung nilai');
