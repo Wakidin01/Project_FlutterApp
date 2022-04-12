@@ -1,4 +1,8 @@
-// void main() {
+// Nama  : Wakidin Nur Akirini
+// Prodi : Manajemen Informatika 1/4
+// NIM   : 20200123017
+
+//// void main() {
 //   // Tipe data dan variable
 //   // var
 //   var mahasiswa = "Wakidin";
