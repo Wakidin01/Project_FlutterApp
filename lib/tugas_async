@@ -1,0 +1,21 @@
+// Tugas Async Wakidin Nur Akirini | 20200123017 | MI WP 1/4
+Future<void> perlombaan() async {
+  print('Perlombaan akan dimulai dalam...');
+  var mulai = await siap();
+  print('Perlombaan telah dimulai $mulai');
+}
+
+Future<String> siap() {
+  return Future.delayed(const Duration(seconds: 3), () => 'Go Go! Go!!');
+}
+
+void main() async {
+  dalam(3);
+  await perlombaan();
+}
+
+void dalam(int s) {
+  for (var i = 1; i <= s; i++) {
+    Future.delayed(Duration(seconds: i), () => print(i));
+  }
+}
